@@ -1,6 +1,6 @@
 {
   "name": "healthy-browser-plugin",
-  "displayName": "Vite Vue 3 Chrome Extension",
+  "displayName": "HealthyPlatformPlugin",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -26,6 +26,7 @@
     "marked": "^14.0.0",
     "pinia": "^2.2.2",
     "vue": "^3.4.38",
+    "vue-draggable-plus": "^0.5.3",
     "vue-router": "^4.4.3",
     "webextension-polyfill": "^0.12.0"
   },

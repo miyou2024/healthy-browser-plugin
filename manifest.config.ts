@@ -1,6 +1,6 @@
 import { env } from 'node:process'
 import type { ManifestV3Export } from '@crxjs/vite-plugin'
-import packageJson from './package.json' assert { type: 'json' }
+import packageJson from './package.json'
 
 const { version, name, description, displayName } = packageJson
 // Convert from Semver (example: 0.1.0-beta6)
@@ -31,7 +31,7 @@ export default {
       all_frames: true,
       js: ['src/content-script/index.ts'],
       matches: ['*://*/*'],
-      run_at: 'document_end',
+      run_at: 'document_idle',
     },
   ],
   offline_enabled: true,

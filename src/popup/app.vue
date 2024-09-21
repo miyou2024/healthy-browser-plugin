@@ -5,7 +5,7 @@
     aria-label="Site Header"
     class="bg-gray-50"
   >
-    Popup Header
+    这个是 Popup 的 Header
   </header>
 
   <RouterView />

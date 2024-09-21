@@ -6,7 +6,7 @@ const version = __VERSION__
 <template>
   <div class="w-full h-full flex flex-col gap-y-4 justify-center items-center">
     <h1 class="text-4xl font-bold">
-      🎉 Installed! 🚀
+      这个页面是首次安装插件成功后第一次打开的提示页面
     </h1>
     <p class="text-xl">
       Thank you for installing {{ displayName }}! ❤️

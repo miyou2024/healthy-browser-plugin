@@ -11,6 +11,7 @@ const store = useAppStore()
 
 const name = computed(() => store.name)
 const count = computed(() => store.count)
+
 </script>
 
 <template>

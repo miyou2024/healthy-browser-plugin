@@ -10,7 +10,7 @@ const version = __VERSION__
       style="grid-area: title"
     >
       <h1 class="text-4xl font-bold text-center">
-        🎉 Updated! 🎉
+        不卸载插件更新插件后的页面
       </h1>
       <p class="text-lg">
         {{ displayName }} has been updated to the latest version. 🎉
