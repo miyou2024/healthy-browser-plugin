@@ -23,6 +23,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "draggabilly": "^3.0.0",
     "marked": "^14.0.0",
     "pinia": "^2.2.2",
     "vue": "^3.4.38",
@@ -36,6 +37,7 @@
     "@iconify-json/mdi": "^1.1.68",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.14",
+    "@types/draggabilly": "^2.1.6",
     "@types/eslint": "^9.6.0",
     "@types/node": "^22.4.1",
     "@types/webextension-polyfill": "^0.12.0",

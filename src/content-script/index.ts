@@ -1,18 +1,30 @@
 import './index.scss'
-// import dragula from 'dragula';
+import Draggabilly from 'draggabilly';
 
 const src = chrome.runtime.getURL('src/content-script/iframe/index.html')
 
 const iframe = document.createElement('iframe')
 iframe.src = src
 // iframe.srcdoc = '<p style="font-wight:bold;color:red">dynamic iframe content</p>';
-iframe.width = '500px'
-iframe.height = '300px'
-iframe.draggable = true;
-iframe.style.position = 'fixed';
+
+
+const el = document.createElement('div');
+el.style.width = '500px'
+el.style.width = '300px'
+el.style.zIndex = '999999';
+el.style.position = 'fixed';
+el.style.top = '100px';
+el.setAttribute('id', 'el-id');
+document.body.append(el)
+
+const elHeader = document.createElement('div');
+elHeader.setAttribute('id', 'el-header');
+elHeader.style.height='50px';
+elHeader.style.background = 'red';
+el.appendChild(elHeader);
+el.appendChild(iframe);
 
 if (iframe) {
-  document.body?.append(iframe)
   iframe.onload = () => {
     const iw = iframe.contentWindow
     console.log('iw', iw)
@@ -21,13 +33,8 @@ if (iframe) {
       iw.postMessage('Hello to iframe from parent!', '*')
     }
 
-    iframe.ondragend = (e) => {
-      console.log('ondragend', e);
-      iframe.style.left = `${e.clientX}px`;
-      iframe.style.top = `${e.clientY}px`;
-    }
-
     // dragula(iframe, {});
+    new Draggabilly(el, {});
   }
 }
 
