@@ -21,6 +21,7 @@ const elHeader = document.createElement('div');
 elHeader.setAttribute('id', 'el-header');
 elHeader.style.height='50px';
 elHeader.style.background = 'red';
+elHeader.style.cursor = 'move';
 el.appendChild(elHeader);
 el.appendChild(iframe);
 
@@ -34,7 +35,10 @@ if (iframe) {
     }
 
     // dragula(iframe, {});
-    new Draggabilly(el, {});
+    new Draggabilly(el, {
+      handle: '#el-header',
+      containment: 'body',
+    });
   }
 }
 
